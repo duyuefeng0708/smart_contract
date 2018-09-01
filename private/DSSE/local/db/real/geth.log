@@ -1,0 +1,48 @@
+I0418 02:30:05.401206 cmd/utils/flags.go:613] WARNING: No etherbase set and no accounts found as default
+I0418 02:30:05.401538 ethdb/database.go:83] Allotted 128MB cache and 1024 file handles to /home/hss/.ethereum/testnet/geth/chaindata
+I0418 02:30:05.454818 ethdb/database.go:176] closed db:/home/hss/.ethereum/testnet/geth/chaindata
+I0418 02:30:05.459513 node/node.go:176] instance: Geth/v1.5.9-stable-a07539fb/linux/go1.7.3
+I0418 02:30:05.459707 ethdb/database.go:83] Allotted 128MB cache and 1024 file handles to /home/hss/.ethereum/testnet/geth/chaindata
+I0418 02:30:05.604631 eth/backend.go:276] Successfully wrote custom genesis block: 41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d
+I0418 02:30:05.605278 eth/db_upgrade.go:346] upgrading db log bloom bins
+I0418 02:30:05.605356 eth/db_upgrade.go:354] upgrade completed in 79.553µs
+I0418 02:30:05.605378 eth/backend.go:187] Protocol Versions: [63 62], Network Id: 3
+I0418 02:30:05.605463 eth/backend.go:215] Chain config: {ChainID: 3 Homestead: 0 DAO: <nil> DAOSupport: true EIP150: 0 EIP155: 10 EIP158: 10}
+I0418 02:30:05.605803 core/blockchain.go:219] Last header: #0 [41941023…] TD=1048576
+I0418 02:30:05.605821 core/blockchain.go:220] Last block: #0 [41941023…] TD=1048576
+I0418 02:30:05.605832 core/blockchain.go:221] Fast block: #0 [41941023…] TD=1048576
+I0418 02:30:05.659166 p2p/server.go:340] Starting Server
+I0418 02:30:07.805478 p2p/discover/udp.go:227] Listening, enode://430a763ac9c20e8002a60495c499bc97165d1d2044c2cc32932e9acd810cdfa926ce940c29a97fc43fda1709e3e76afbcc4fee68d76b0e2862ea72dc98e1f078@[::]:30303
+I0418 02:30:07.812203 p2p/server.go:608] Listening on [::]:30303
+I0418 02:30:07.813006 node/node.go:341] IPC endpoint opened: /home/hss/.ethereum/testnet/geth.ipc
+I0418 02:30:07.844587 node/node.go:373] IPC endpoint closed: /home/hss/.ethereum/testnet/geth.ipc
+I0418 02:30:07.844628 core/blockchain.go:589] Chain manager stopped
+I0418 02:30:07.844637 eth/handler.go:230] Stopping ethereum protocol handler...
+I0418 02:30:07.844651 eth/handler.go:251] Ethereum protocol handler stopped
+I0418 02:30:07.844699 core/tx_pool.go:196] Transaction pool stopped
+I0418 02:30:07.844713 eth/backend.go:519] Automatic pregeneration of ethash DAG OFF (ethash dir: /home/hss/.ethash)
+I0418 02:30:07.844773 ethdb/database.go:176] closed db:/home/hss/.ethereum/testnet/geth/chaindata
+Fatal: Error starting protocol stack: listen tcp 127.0.0.1:8545: bind: address already in use
+I0418 02:31:12.612406 cmd/utils/flags.go:613] WARNING: No etherbase set and no accounts found as default
+I0418 02:31:12.612601 ethdb/database.go:83] Allotted 128MB cache and 1024 file handles to /home/hss/.ethereum/testnet/geth/chaindata
+I0418 02:31:12.643238 ethdb/database.go:176] closed db:/home/hss/.ethereum/testnet/geth/chaindata
+I0418 02:31:12.656400 node/node.go:176] instance: Geth/v1.5.9-stable-a07539fb/linux/go1.7.3
+I0418 02:31:12.656465 ethdb/database.go:83] Allotted 128MB cache and 1024 file handles to /home/hss/.ethereum/testnet/geth/chaindata
+I0418 02:31:12.725002 core/genesis.go:95] Genesis block already in chain. Writing canonical number
+I0418 02:31:12.725082 eth/backend.go:276] Successfully wrote custom genesis block: 41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d
+I0418 02:31:12.725188 eth/backend.go:187] Protocol Versions: [63 62], Network Id: 3
+I0418 02:31:12.725361 eth/backend.go:215] Chain config: {ChainID: 3 Homestead: 0 DAO: <nil> DAOSupport: true EIP150: 0 EIP155: 10 EIP158: 10}
+I0418 02:31:12.725771 core/blockchain.go:219] Last header: #0 [41941023…] TD=1048576
+I0418 02:31:12.725789 core/blockchain.go:220] Last block: #0 [41941023…] TD=1048576
+I0418 02:31:12.725800 core/blockchain.go:221] Fast block: #0 [41941023…] TD=1048576
+I0418 02:31:12.728079 p2p/server.go:340] Starting Server
+I0418 02:31:14.842816 p2p/discover/udp.go:227] Listening, enode://430a763ac9c20e8002a60495c499bc97165d1d2044c2cc32932e9acd810cdfa926ce940c29a97fc43fda1709e3e76afbcc4fee68d76b0e2862ea72dc98e1f078@[::]:30303
+I0418 02:31:14.850273 node/node.go:411] HTTP endpoint opened: http://localhost:8545
+I0418 02:31:14.870500 p2p/server.go:608] Listening on [::]:30303
+I0418 02:31:14.871096 node/node.go:341] IPC endpoint opened: /home/hss/.ethereum/testnet/geth.ipc
+I0418 02:33:27.943185 cmd/geth/main.go:286] New wallet appeared: keystore:///home/hss/.ethereum/testnet/keystore/UTC--2017-04-18T09-33-24.294521706Z--c43283d18741d6e5fc926835352ecb83f683c4a8, Locked
+I0418 03:31:04.815061 node/node.go:427] HTTP endpoint closed: http://localhost:8545
+I0418 03:31:04.886973 node/node.go:373] IPC endpoint closed: /home/hss/.ethereum/testnet/geth.ipc
+I0418 03:31:04.887075 core/blockchain.go:589] Chain manager stopped
+I0418 03:31:04.892534 eth/handler.go:230] Stopping ethereum protocol handler...
+I0418 03:31:04.892622 eth/handler.go:251] Ethereum protocol handler stopped
