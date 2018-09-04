@@ -1,9 +1,9 @@
 var MyContract = artifacts.require("./MyContract.sol");
 
 
-var searchtoken = require("./local/db/searchtoken.json");
+var searchtoken = require("./buildIndex/db/searchtoken.json");
 
-var index = require("./local/db/label.json");
+var index = require("./buildIndex/db/label.json");
 
 
 module.exports = function (callback){

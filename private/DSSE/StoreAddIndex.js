@@ -18,7 +18,7 @@ var total;
 
 function read_json(){
 
-addindex = require("./local/db/labeladd.json");  //******
+addindex = require("./buildIndex/db/labeladd.json");  //******
 wordcount = require('jsonfile'); //******
 //console.log(addindex);
 var i=0;

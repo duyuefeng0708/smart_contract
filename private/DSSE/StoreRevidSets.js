@@ -17,7 +17,7 @@ var total;
 
 function read_json(){
 
-delindex = require("./local/db/labeldel.json");  //******
+delindex = require("./buildIndex/db/labeldel.json");  //******
 //console.log(addindex);
 var i=0;
 
