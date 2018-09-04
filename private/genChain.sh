@@ -1,1 +1,0 @@
-geth --identity "louisNode" --rpc --rpcport "8545" --rpccorsdomain "*" --datadir "/Users/louis/Chain" --port "30303" --nodiscover --ipcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --rpcapi "db,eth,net,web3" --autodag --networkid 1900 --nat "any" console init privatechaininit.json
