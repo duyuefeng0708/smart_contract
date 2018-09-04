@@ -29,21 +29,21 @@ Environment setup for each ec2 instance:
 
 ```json
 {
-    “config”: {
-        “chainId”: 8888,
-        “homesteadBlock”: 0,    
-        “eip155Block”: 0,
-        “eip158Block”: 0
+    "config": {
+        "chainId": 8888,
+        "homesteadBlock": 0,    
+        "eip155Block": 0,
+        "eip158Block": 0
     },
-    “coinbase” : “0x0000000000000000000000000000000000000000”,
-    “difficulty” : “0x1000”,
-    “extraData” : “”,
-    “gasLimit” : “0x7a1200”,
-    “nonce” : “0x0000000000000042”,
-    “mixhash” : “0x0000000000000000000000000000000000000000000000000000000000000000”,
-    “parentHash” : “0x0000000000000000000000000000000000000000000000000000000000000000”,
-    “timestamp” : “0x00”,
-    “alloc”: {
+    "coinbase" : "0x0000000000000000000000000000000000000000",
+    "difficulty" : "0x1000",
+    "extraData" : "",
+    "gasLimit" : "0x7a1200",
+    "nonce" : "0x0000000000000042",
+    "mixhash" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "parentHash" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "timestamp" : "0x00",
+    "alloc": {
     }
 }
 ```
