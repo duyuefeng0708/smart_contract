@@ -165,6 +165,8 @@ def index(rootdir):
 	pairnum =0
 	for parent, dirnames, filenames in os.walk(rootdir):
 		for filename in filenames:
+			if filename.startswith('.'):
+				continue
 			file_path = os.path.join(parent, filename)
 			file_index (parent, filename, file_id)
 			print 'filename is: ', filename, '	file id is: ', file_id
@@ -218,30 +220,30 @@ def index(rootdir):
 		    #L_label[countindex].append(it)
 		    countindex +=1
 		else:
-		    print word
+		    # print word
 		    #it = (os.urandom(16)).encode('hex') # the random string used for encryption\
 		    #lp = myTools.hmactest10(K2, it)
 		    #label = myTools.hmactest(K1, c)
 		    ut = len(index_matrix[loc])
 		    d = [0 for i in range (ut +16)]
-		    print ut
+		    # print ut
 		    j = 0
 		    for fid in index_matrix[loc]:
 		        #i = 0
 		        d[j] = fid
 		        j+=1
-		    print d
+		    # print d
 		    c = 0
 		    #out = []
 		    for i in range (ut/16 +1):
-		        print i
+		        # print i
 		        it = (os.urandom(16)).encode('hex') # the random string used for encryption\
 		        #print it
 		        lp = myTools.hmactest10(K2, it)
 		        label = myTools.hmactest(K1, c)
 		        #print lp, label
 		        out = struct.pack('BBBBBBBBBBBBBBBB', d[16*i], d[(16*i)+1], d[(16*i)+2], d[(16*i)+3] ,d[(16*i)+4], d[(16*i)+5], d[(16*i)+6], d[(16*i)+7] ,d[(16*i)+8], d[(16*i)+9],d[(16*i)+10],d[(16*i)+11],d[(16*i)+12],d[(16*i)+13],d[(16*i)+14],d[(16*i)+15])
-		        print out.encode('hex')
+		        # print out.encode('hex')
 		        u = ''.join(chr(ord(a) ^ ord(b)) for a,b in zip(lp,out))
 		        cipher = u.encode('hex')
 		        #print cipher
@@ -254,8 +256,8 @@ def index(rootdir):
 	            
 	   
 	outputpath = os.path.join(os.getcwd(), 'db')
-	print pairnum  
-	with open(os.path.join(outputpath, 'label.json'), 'wb') as outputfile:
+	# print pairnum  
+	with open(os.path.join(outputpath, 'labeldemo.json'), 'wb') as outputfile:
 		
 		#store the dictionary in json format
 		outputfile.write(json.dumps(L_label, indent = 4))
@@ -641,8 +643,8 @@ def index(rootdir):
 #run: python index.py db_name (e.g. test)
 
 if __name__ == '__main__':
-	print 'argv[0]: ', sys.argv[0]
-	print 'argv[1]: ', sys.argv[1]
+	# print 'argv[0]: ', sys.argv[0]
+	# print 'argv[1]: ', sys.argv[1]
 	rootdir = os.path.join(os.getcwd(), 'db', sys.argv[1])
 	index(rootdir)
 #	print 'counter is', counter

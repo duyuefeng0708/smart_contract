@@ -1,4 +1,6 @@
 var MyContract = artifacts.require("./MyContract.sol");
+MyContract.synchronization_timeout = 0;
+
 var crypto = require('crypto');
 
 var label = new Array()   //store all the label.
