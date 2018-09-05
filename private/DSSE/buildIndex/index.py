@@ -190,7 +190,7 @@ def index(rootdir):
 				continue
 			file_path = os.path.join(parent, filename)
 			file_index(parent, filename, file_id)
-			print ('filename is: ', filename, '	file id is: ', file_id)
+			print 'filename is: ', filename, '	file id is: ', file_id
 			file_id += 1
 
 	#store label (pointing to each keyword-file pair) and corresponding encrypted file id, and random strings.
