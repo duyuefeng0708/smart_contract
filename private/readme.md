@@ -68,6 +68,9 @@ Make sure it is authenticated first in the geth console. Next use the truffle su
     $ truffle compile
     $ truffle migrate
 
+# Dataset
+"labeltest1w.json" and "searchtoken.json" are the build SSE database and search index separately and are already available for direct contract call. We suggest using the "test1w" data in the directory ./DSSE/buildIndex/db for SSE-building python scripts, and "test1w" contains a lot emails as the raw data for SSE preparation.
+
 # Contract function call
 
     $ truffle exec DSSE/StoreIndex.js
