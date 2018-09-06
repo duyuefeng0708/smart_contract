@@ -191,7 +191,7 @@ def index(rootdir):
 					continue
 				file_path = os.path.join(parent, filename)
 				file_index(parent, filename, file_id)
-				out.write('filename is: ' + str(filename) + '	file id is: '+ str(file_id) + '\n')
+				out.write('filename is: ' + str(filename) + '\n' + ' -> file id is: '+ str(file_id) + '\n')
 				file_id += 1
 	out.close()
 
@@ -290,7 +290,6 @@ def index(rootdir):
 if __name__ == '__main__':
 	# print 'argv[0]: ', sys.argv[0]
 	# print 'argv[1]: ', sys.argv[1]
-	sys.argv[1] = 'finance20k'
 	rootdir = os.path.join(os.getcwd(), 'db', sys.argv[1])
 	index(rootdir)
 #	print 'counter is', counter
