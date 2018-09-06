@@ -184,14 +184,16 @@ def index(rootdir):
 
 	sep = '_'
 	pairnum = 0
-	for parent, dirnames, filenames in os.walk(rootdir):
-		for filename in filenames:
-			if filename.startswith('.') or filename.startswith('f'):
-				continue
-			file_path = os.path.join(parent, filename)
-			file_index(parent, filename, file_id)
-			print 'filename is: ', filename, '	file id is: ', file_id
-			file_id += 1
+	with open(os.path.join(os.getcwd(), 'db', sys.argv[1], 'fileid.txt'), 'wb') as out:	
+		for parent, dirnames, filenames in os.walk(rootdir):
+			for filename in filenames:
+				if not filename[0].isdigit():
+					continue
+				file_path = os.path.join(parent, filename)
+				file_index(parent, filename, file_id)
+				out.write('filename is: ' + str(filename) + '	file id is: '+ str(file_id) + '\n')
+				file_id += 1
+	out.close()
 
 	#store label (pointing to each keyword-file pair) and corresponding encrypted file id, and random strings.
 	# print (len(keywords_loc))
@@ -278,7 +280,7 @@ def index(rootdir):
 
 	outputpath = os.path.join(os.getcwd(), 'db')
 	# print pairnum
-	with open(os.path.join(outputpath, 'labeltest1w.json'), 'wb') as outputfile:
+	with open(os.path.join(outputpath, 'label'+sys.argv[1]+'.json'), 'wb') as outputfile:
 
 		#store the dictionary in json format
 		outputfile.write(json.dumps(L_label, indent=4))
@@ -288,7 +290,7 @@ def index(rootdir):
 if __name__ == '__main__':
 	# print 'argv[0]: ', sys.argv[0]
 	# print 'argv[1]: ', sys.argv[1]
-	# rootdir = os.path.join(os.getcwd(), 'db', "test1w")
+	sys.argv[1] = 'finance20k'
 	rootdir = os.path.join(os.getcwd(), 'db', sys.argv[1])
 	index(rootdir)
 #	print 'counter is', counter
