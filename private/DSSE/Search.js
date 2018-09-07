@@ -3,7 +3,7 @@ var MyContract = artifacts.require("./MyContract.sol");
 
 var searchtoken = require("./buildIndex/db/searchtoken.json");
 
-var index = require("./buildIndex/db/label.json");
+var index = require("./buildIndex/db/labelfinance255.json");
 
 
 module.exports = function (callback){
@@ -79,12 +79,18 @@ module.exports = function (callback){
     var c = 0;
     var string = '11';
     while (i<=1){
-    
+	
+	instance.searchfile(K1,K2,c).then(function(read_re){
+		console.log(read_re);
+	}).catch(function (err){
+		console.log(err);
+	})
+
     instance.searchfile.call(K1,K2,c).then(function(read_re){
-	console.log(read_re);
-}).catch(function (err){
-	console.log(err);
-})
+		console.log(read_re);
+	}).catch(function (err){
+		console.log(err);
+	})
     i+=1;
     c = c +47;
 }
