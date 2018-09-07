@@ -3,7 +3,7 @@ var MyContract = artifacts.require("./MyContract.sol");
 
 var searchtoken = require("./buildIndex/db/searchtoken.json");
 
-var index = require("./buildIndex/db/labelfinance255.json");
+var index = require("./buildIndex/db/labelfinance1.json");
 
 
 module.exports = function (callback){
