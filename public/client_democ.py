@@ -219,7 +219,9 @@ class Client:
         setg.close()
 
         print("The index digest is:", hasher.hexdigest())
-        print("The set hash is:", sethh, sep='')
+        sethashres = '['+','.join(str(i) for i in sethh)
+        sethashres = sethashres+']'
+        print("The set hash is:", sethashres)
         #print("The set hash is:", h)
             #pickle.dump(cstar, handle, protocol=pickle.HIGHEST_PROTOCOL)
         with open('checklist.json', 'w') as ccc:

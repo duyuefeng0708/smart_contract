@@ -191,9 +191,8 @@ class Service:
             #    print(data)
 
         # print(self.searchindex[query])
-        queryans = '['+','.join(str(i) for i in postinglist)
-        queryans = queryans+']'
-        print('The query answer is :   ', queryans)
+
+        print('The query answer is :   ', postinglist)
         print('The digest is :  ', hm)
         print(
             '****************************************************************************')
