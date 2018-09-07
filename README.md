@@ -63,6 +63,7 @@ Make sure it is authenticated first in the geth console, then use the truffle su
 We use two datasets to test encrypted search service on private blockchain and public blockchain respectively.
 
 Enron Email Dataset (CMU)
+
 Synthetic financial dataset (with specification provided by Hong Kong Applied Science and Technology Research Institute (ASTRI)
 
 # Contract function execution examples
@@ -83,17 +84,17 @@ Generate encrypted file index of added file(s)
 
     $ python client_democ.py <Folder> 
 
-Confirm index digest and set hash
+Confirm index digest and set hash (Assume the index file is in the current directory)
 
-    $ python service_peer_check.py    
+    $ python service_peer_check.py 
 
 Generate encrypted search token of a query keyword
 
     $ python searchtoken_demo.py <Keyword>
 
-Execute encrypted search 
+Execute encrypted search (Assume the searchtoken is in the current directory)
 
-    $ python service_peer_democ.py
+    $ python service_peer_democ.py <searchtoken>
 
 # License
 MIT
