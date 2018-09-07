@@ -94,7 +94,7 @@ Generate encrypted search token of a query keyword
 
 Execute encrypted search (Assume the searchtoken is in the current directory)
 
-    $ python service_peer_democ.py <searchtoken>
+    $ python service_peer_democ.py
 
 # License
 MIT
