@@ -22,7 +22,7 @@ var total;
 
 function read_json(){
 
-index = require("./buildIndex/db/labelfinance1.json");
+index = require("./buildIndex/db/labelfinance10.json");
 //index = require("./local/db/labeltest2.json");
 //string = require("./local/db/randomstring.json");
 

@@ -1,4 +1,3 @@
-import simpy
 import json
 #import cPickle as pickle
 import pickle
@@ -195,6 +194,8 @@ class Service:
         
         print('The query answer is :   ', postinglist)
         print('The digest is :  ', hm)
+        with open('search_result_digest_peer.json', 'w') as setg:
+            json.dump(hm, setg)
         print(
             '****************************************************************************')
         #self.output(srtoken, postinglist, hm)
