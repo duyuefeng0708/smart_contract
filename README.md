@@ -6,9 +6,9 @@ We provide **two** encrypted search services for **private blockchain** and **pu
 Note that the service for public blockchain further considers **malicious threats** in an untrusted distributed environment.
 
 # Publication
-Chengjun Cai, Jian Weng, Xingliang Yuan, Cong Wang, "Enabling Reliable Keyword Search in Encrypted Decentralized Storage with Fairness", under major revision of IEEE Transactions on Dependable and Secure Computing (TDSC)
+* Chengjun Cai, Jian Weng, Xingliang Yuan, Cong Wang, "Enabling Reliable Keyword Search in Encrypted Decentralized Storage with Fairness", under major revision of IEEE Transactions on Dependable and Secure Computing (TDSC)
 
-Shengshan Hu, Chengjun Cai, Qian Wang, Cong Wang, Luo Xiangyang, and Kui Ren, "Searching an Encrypted Cloud Meets Blockchain: A Decentralized, Reliable and Fair Realization", in the 37th International Conference on Computer Communications (INFOCOM'18)
+* Shengshan Hu, Chengjun Cai, Qian Wang, Cong Wang, Luo Xiangyang, and Kui Ren, "Searching an Encrypted Cloud Meets Blockchain: A Decentralized, Reliable and Fair Realization", in the 37th International Conference on Computer Communications (INFOCOM'18)
 
 
 
