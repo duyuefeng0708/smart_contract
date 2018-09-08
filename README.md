@@ -73,7 +73,7 @@ Synthetic financial dataset (with specification provided by Hong Kong Applied Sc
 
 # Execution examples for Application I
 
-### Formatting input dataset
+### Format input dataset
 
 For a financial dataset with 128-dimensional vectors, we first extract each row as a separate file. The keyword inside each file is represented as
     
@@ -83,7 +83,7 @@ For example, keyword 'UID:1' is built with attribute 'UID' and its value in that
 
 We can then put all formatted files into a folder
 
-### Building encrypted index    
+### Build encrypted index    
 
 The encrypted index is built with python file 'index.py'
 
@@ -101,7 +101,7 @@ We execute the command with the truffle suite
 
     $ truffle exec DSSE/StoreIndex.js
 
-### Generating encrypted search token
+### Generate encrypted search token
 
 Given a plaintext keyword input, we generate the corresponding encrypted search token
     
