@@ -93,9 +93,16 @@ class Service:
             hm=sethash.Sethash(mappin.values())
             if(fid!=0):
                 sethh.append(hm)
+        sethashres = '['+','.join(str(i) for i in sethh)
+        sethashres = sethashres+']'
+        print("The set hash is:", sethashres)
         with open('sethash_peer.json', 'w') as setg:
-            json.dump(sethh, setg)
+            json.dump(sethashres, setg)
+        #print(len(sethh))
         setg.close()
+        #with open('sethash_peer.json', 'w') as setg:
+        #    json.dump(sethh, setg)
+        #setg.close()
         #print("The set hash is:", hm)
 
         #self.fileindex = cstar

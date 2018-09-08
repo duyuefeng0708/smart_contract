@@ -141,7 +141,7 @@ The built file index is stored as binary file `fileindex-demo.p`
 
 Service peer load the file `fileindex-demo.p`, and execute `service_peer_check.py` 
 
-    $ python service_peer_check.py <File>
+    $ python service_peer_check.py
 
 The computed index digest and set hash(es) of all added file(s) are presented and  recorded on the blockchain via contract function `Storeindex`
 

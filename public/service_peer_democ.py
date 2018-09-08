@@ -1,3 +1,4 @@
+import simpy
 import json
 #import cPickle as pickle
 import pickle
@@ -20,6 +21,7 @@ import struct
 import os
 #from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 import base64
+import cProfile
 import pstats
 import io
 import numpy as np
@@ -78,8 +80,7 @@ class Service:
 
         #self.fileindex = cstar
         for y in range(1):
-            #### input the keyword to be queried
-            query = b'Date:'
+
             #query = b'ft'
             try:
                 #query = b'phi'
@@ -191,7 +192,7 @@ class Service:
             #    print(data)
 
         # print(self.searchindex[query])
-
+        
         print('The query answer is :   ', postinglist)
         print('The digest is :  ', hm)
         print(

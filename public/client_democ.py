@@ -214,14 +214,17 @@ class Client:
         with open('indexdigest_client.json', 'w') as indexa:
             json.dump(hasher.hexdigest(), indexa)
         indexa.close()
-        with open('sethash_client.json', 'w') as setg:
-            json.dump(sethh, setg)
-        setg.close()
-
-        print("The index digest is:", hasher.hexdigest())
         sethashres = '['+','.join(str(i) for i in sethh)
         sethashres = sethashres+']'
         print("The set hash is:", sethashres)
+        with open('sethash_client.json', 'w') as setg:
+            json.dump(sethashres, setg)
+        #print(len(sethh))
+        setg.close()
+
+        print("The index digest is:", hasher.hexdigest())
+
+        #print("The set hash is:", sethh, sep='')
         #print("The set hash is:", h)
             #pickle.dump(cstar, handle, protocol=pickle.HIGHEST_PROTOCOL)
         with open('checklist.json', 'w') as ccc:
