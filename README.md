@@ -28,7 +28,7 @@ Required tools:
     python 3.7 (additional packages: Cryptography and BitVector)
 
 # Configuration of private blockchain network
-  * Geth `genesis.json` template
+Geth `genesis.json` template
 
 ```json
 {
