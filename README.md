@@ -1,7 +1,9 @@
 # Introduction
 This project targets the ubiquitous *keyword search function* and aims to deliver *encrypted search services* for blockchain-based applications. 
 
-We provide **two** encrypted search services for **private blockchain** and **public blockchain**, respectively. Both services ensure the confidentiality of data and query, without affecting the correctness and verifiability of blockchain. Note that the service for public blockchain further considers **malicious threats** in an untrusted distributed environment.
+We provide **two** encrypted search services for **private blockchain** and **public blockchain**, respectively. Both services ensure the confidentiality of data and query, without affecting the correctness and verifiability of blockchain. 
+
+Note that the service for public blockchain further considers **malicious threats** in an untrusted distributed environment.
 
 # Publication
 Chengjun Cai, Jian Weng, Xingliang Yuan, Cong Wang, "Enabling Reliable Keyword Search in Encrypted Decentralized Storage with Fairness", under major revision of IEEE Transactions on Dependable and Secure Computing (TDSC)
