@@ -133,7 +133,7 @@ The index digest and set hash(es) of all added file(s) are presented in the cons
 
 The built file index is stored as binary file 'fileindex-demo.p'
 
-### Service peer confirms index digest and set hash(es) 
+### Confirm index digest and set hash(es) 
 
 Service peer load the file 'fileindex-demo.p', and execute 'service_peer_check.py' 
 
