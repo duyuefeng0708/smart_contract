@@ -184,6 +184,7 @@ def index(rootdir):
 
 	sep = '_'
 	pairnum = 0
+	d = {}
 	with open(os.path.join(os.getcwd(), 'db', sys.argv[1], 'fileid.txt'), 'wb') as out:	
 		for parent, dirnames, filenames in os.walk(rootdir):
 			for filename in filenames:
@@ -191,9 +192,13 @@ def index(rootdir):
 					continue
 				file_path = os.path.join(parent, filename)
 				file_index(parent, filename, file_id)
+				d[file_id] = filename
 				out.write('filename is: ' + str(filename) + '\n' + ' -> file id is: '+ str(file_id) + '\n')
 				file_id += 1
 	out.close()
+
+	with open(os.path.join(os.path.dirname(os.path.dirname(os.getcwd())),'fileid.p'), 'wb') as fp:
+		pickle.dump(d, fp, protocol=pickle.HIGHEST_PROTOCOL)
 
 	#store label (pointing to each keyword-file pair) and corresponding encrypted file id, and random strings.
 	# print (len(keywords_loc))

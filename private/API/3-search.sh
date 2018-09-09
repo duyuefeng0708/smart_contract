@@ -5,4 +5,5 @@ cd ./DSSE/buildIndex
 python searchtoken.py ${ans}
 cd ../../
 # Mac OS needs -i "" to overwrite using sed, "" should not appear in other Unix-like platforms.
-truffle exec DSSE/Search.js
+truffle exec DSSE/Search.js > outcome
+python readoutput.py | while read line ; do open ./DSSE/buildIndex/db/finance10/$line ; done
