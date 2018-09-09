@@ -55,13 +55,15 @@ def token (query):
     sr = searchgen.update(query)
     srtoken = searchgen.digest()
     print('The query keyword is :    ', str(query))
-    print('The search token is:      ', searchgen.hexdigest())
+    print('The search token is:      ', "\""+searchgen.hexdigest()+"\"")
+    print("Contract function call (Search) input:\n","\""+searchgen.hexdigest()+"\""+",0")
     with open('searchtoken.p', 'wb') as sr:
         #lists[token] = plist
         # print(lists)
         # sr.write(str(lists))
         pickle.dump(srtoken, sr)
     sr.close()
+    print ("Creating a file for the search token ...")
     with open('searchtoken.json', 'w') as indexa:
             json.dump(searchgen.hexdigest(), indexa)
     indexa.close()

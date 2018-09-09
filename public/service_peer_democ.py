@@ -194,6 +194,7 @@ class Service:
         
         print('The query answer is :   ', postinglist)
         print('The digest is :  ', hm)
+        print("Contract function call (Search) input:\n","\""+token1+"\","+str(hm))
         with open('search_result_digest_peer.json', 'w') as setg:
             json.dump(hm, setg)
         print(
@@ -263,4 +264,5 @@ class Service:
 
 
 oo = Service()
+print ("Creating files for the search token and search result digest ...")
 

@@ -200,6 +200,7 @@ class Client:
 
         #indexcomplete.succeed()
         print("File index is built! :)")
+        print("Creating files for file id, file index, index digest, sethash and checklist...")
         #np.savez('fileindex.npz', cstar)
         with open('fileindex-demo.p', 'wb') as handle:
             pickle.dump(cstar, handle, protocol=pickle.HIGHEST_PROTOCOL)
@@ -216,13 +217,14 @@ class Client:
         indexa.close()
         sethashres = '['+','.join(str(i) for i in sethh)
         sethashres = sethashres+']'
-        print("The set hash is:", sethashres)
+        # print("The set hash is:", sethashres)
         with open('sethash_client.json', 'w') as setg:
             json.dump(sethashres, setg)
         #print(len(sethh))
         setg.close()
 
-        print("The index digest is:", hasher.hexdigest())
+        # print("The index digest is:", hasher.hexdigest())
+        print("Contract function call (Storeindex) input:\n","\""+hasher.hexdigest()+"\","+sethashres)
 
         #print("The set hash is:", sethh, sep='')
         #print("The set hash is:", h)

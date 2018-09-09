@@ -75,10 +75,11 @@ class Service:
             hasher.update(buf)
         hashing.close()
         
+        print ("Creating files for index digest and sethash ...")
         with open('indexdigest_peer.json', 'w') as indexa:
             json.dump(hasher.hexdigest(), indexa)
         indexa.close()
-        print("The index digest is:", hasher.hexdigest())
+        # print("The index digest is:", hasher.hexdigest())
         
         #print(b)
 
@@ -95,7 +96,8 @@ class Service:
                 sethh.append(hm)
         sethashres = '['+','.join(str(i) for i in sethh)
         sethashres = sethashres+']'
-        print("The set hash is:", sethashres)
+        # print("The set hash is:", sethashres)
+        print("Contract function call (Storeindex) input:\n","\""+hasher.hexdigest()+"\","+sethashres)
         with open('sethash_peer.json', 'w') as setg:
             json.dump(sethashres, setg)
         #print(len(sethh))
