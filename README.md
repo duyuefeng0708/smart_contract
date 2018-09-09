@@ -19,7 +19,7 @@ Recommended environment for private blockchain network:
 
 Recommended public blockchain test network:
 
-    Rinkeby
+    ROPSTEN 
 
 Required tools:
 
