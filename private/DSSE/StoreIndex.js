@@ -166,8 +166,8 @@ module.exports = function (callback){
 	
 		
 		instance.storelabel(label_part[counter],fid_part[counter],ram_part[counter]).then(function(read_re){
-			console.log(read_re);
-			console.log('Store Successfully');
+			console.log(read_re.tx);
+			console.log('Store Successfully on a new block');
 		}).catch(function (err){
 			console.log(err);
 		})
@@ -207,8 +207,8 @@ module.exports = function (callback){
 
 	
  	instance.storelabel(label_last,fid_last, ram_last).then(function(read_re){
-		console.log(read_re);
-		console.log('Store Successfully');
+		console.log(read_re.tx);
+		console.log('Store Successfully on a new block');
 	}).catch(function (err){
 		console.log(err);
 	})

@@ -4,6 +4,7 @@ read -p "Please input the directory that contains all the files to be built. `ec
 # echo $1
 cd ./DSSE/buildIndex
 python index.py $ans
+echo "Finish building index."
 cd ../
 # Mac OS needs -i "" to overwrite using sed, "" should not appear in other Unix-like platforms.
 sed "s/finance1/$ans/g" StoreIndexSpare.js > StoreIndex.js

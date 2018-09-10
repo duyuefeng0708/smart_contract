@@ -80,11 +80,11 @@ module.exports = function (callback){
     var string = '11';
     while (i<=1){
 	
-	instance.searchfile(K1,K2,c).then(function(read_re){
-		console.log(read_re);
-	}).catch(function (err){
-		console.log(err);
-	})
+	// instance.searchfile(K1,K2,c).then(function(read_re){
+	// 	console.log(read_re);
+	// }).catch(function (err){
+	// 	console.log(err);
+	// })
 
     instance.searchfile.call(K1,K2,c).then(function(read_re){
 		console.log(read_re);
