@@ -70,16 +70,20 @@ def file_index (parent, filename, file_id):
 def index (rootdir):
     sep = '_'
     filenum = 1
-    
+    d = {}
     pairnum =0
     for parent, dirnames, filenames in os.walk(rootdir):
         for filename in filenames:
             file_path = os.path.join(parent, filename)
             file_index (parent, filename, filenum)
-            print ('filename is: ', filename, '  file id is: ', filenum)
+            print ('filename is: ', filename,'\n' ,' ->file id is: ', filenum)
+            d[filenum] = filename
             filenum += 1
-    return filenum
 
+    with open(os.getcwd()+'/fileid.p', 'wb') as fileid:
+        pickle.dump(d, fileid, protocol=pickle.HIGHEST_PROTOCOL)
+
+    return filenum
 
 #################################
 

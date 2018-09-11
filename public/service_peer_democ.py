@@ -191,8 +191,11 @@ class Service:
             #    print(data)
 
         # print(self.searchindex[query])
-        
-        print('The query answer is :   ', postinglist)
+        with open("fileid.p", 'rb') as fp:
+            data = pickle.load(fp)
+        print('Search result is derived. The matched file(s) are :   ')
+        for elem in postinglist:
+            print('-',data[elem],'-')
         print('The digest is :  ', hm)
         print("Contract function call (Search) input:\n","\""+token1+"\","+str(hm))
         with open('search_result_digest_peer.json', 'w') as setg:
